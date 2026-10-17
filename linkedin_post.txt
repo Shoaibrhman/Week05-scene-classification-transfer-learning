@@ -1,13 +1,14 @@
-Week 5 of Applied AI: my first deep learning model.
+Excited to share a milestone from my Applied AI coursework: my first deep learning image classifier.
 
-I taught a network to recognise 6 kinds of scenes (forest,
-glacier, sea, street...) with 93.5% test accuracy.
+Using transfer learning with a pretrained ResNet-18, I trained a model to recognise six natural scene categories (buildings, forest, glacier, mountain, sea and street) and reached 93.5% accuracy on unseen test images.
 
-The trick: transfer learning. ResNet-18 already learned edges,
-textures and shapes from 1.2 million ImageNet photos. I trained
-only 3,078 new parameters first, then fine-tuned the last block.
+Key takeaways:
+- Only 3,078 new parameters were trained at first, with the pretrained layers kept frozen, and this already gave 90.1% validation accuracy.
+- Fine-tuning the final block with a lower learning rate raised validation accuracy to 93.2%.
+- Error analysis showed the model most often confused glacier with mountain, which are visually similar even to a human eye.
 
-Its most common mistake: glacier vs mountain. Honestly, some of
-those photos confuse me too. [attach screenshot of the error gallery]
+This project showed me how much pretrained models can achieve with limited data and compute, and why careful evaluation matters as much as the accuracy number itself.
 
-#DeepLearning #PyTorch #ComputerVision #LearningInPublic
+Full notebook, code and results: https://github.com/Shoaibrhman/Week05-scene-classification-transfer-learning
+
+#DeepLearning #PyTorch #ComputerVision #TransferLearning #LearningInPublic
