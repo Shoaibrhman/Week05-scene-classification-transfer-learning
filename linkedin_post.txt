@@ -1,0 +1,13 @@
+Week 5 of Applied AI: my first deep learning model.
+
+I taught a network to recognise 6 kinds of scenes (forest,
+glacier, sea, street...) with 93.5% test accuracy.
+
+The trick: transfer learning. ResNet-18 already learned edges,
+textures and shapes from 1.2 million ImageNet photos. I trained
+only 3,078 new parameters first, then fine-tuned the last block.
+
+Its most common mistake: glacier vs mountain. Honestly, some of
+those photos confuse me too. [attach screenshot of the error gallery]
+
+#DeepLearning #PyTorch #ComputerVision #LearningInPublic
